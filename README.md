@@ -1,4 +1,4 @@
-# Dsa-Java
+# Git
 
 Git
 The command git checkout -b <branchname> is used to create and switch to a new branch in Git. It is a shortcut for the following two commands:
