@@ -22,7 +22,7 @@ public class Main {
          it = list.listIterator();
         while (it.hasNext())
         {
-            int x = (Integer)it.next();
+            int x = it.next();
             System.out.println(x);
         }
 
