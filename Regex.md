@@ -130,6 +130,52 @@ class MyRegex {
 }
 ```
 
-This code defines a string variable num that holds a subexpression that matches a number from 0 to 255. The subexpression is a combination of three alternatives, each enclosed in parentheses and separated by a pipe. The first alternative matches any number from 0 to 199, by using the optional prefix [01]? followed by one or two digits (\\d{1,2}). The second alternative matches any number from 200 to 249, by using the prefix 2 followed by a digit from 0 to 4 ([0-4]) and another digit (\\d). The third alternative matches any number from 250 to 255, by using the prefix 25 followed by a digit from 0 to 5 ([0-5]). The code then concatenates the subexpression with dots to create the final pattern that matches the IP address.
+This code defines a string variable num that holds a subexpression that matches a number from 0 to 255. The subexpression is a combination of three alternatives, each enclosed in parentheses and separated by a pipe. The first alternative matches any number from 0 to 199, by using the optional prefix [01]? followed by one or two digits (\\d{1,2}). The second alternative matches any number from 200 to 249, by using the prefix 2 followed by a digit from 0 to 4 ([0-4]) and another digit (\\d). The third alternative matches any number from 250 to 255, by using the prefix 25 followed by a digit from 0 to 5 ([0-5]). The code then 
+concatenates the subexpression with dots to create the final pattern that matches the IP address.
 
 You can use this code to complete the MyRegex class and test your program. If you want to learn more about the java.util.regex package and regular expressions in Java, you can check out these [tutorials] and [examples]. I hope this helps. 😊
+
+
+
+
+
+Java
+Java Regex 2 - Duplicate Words Hackerrank
+
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class DuplicateWords {
+
+    public static void main(String[] args) {
+
+        // String regex = "/* Write a RegEx matching repeated words here. */";
+        String regex = "\\b(\\w+)(\\s+\\1\\b)+";
+        // Pattern p = Pattern.compile(regex, /* Insert the correct Pattern flag here.*/);
+        Pattern p = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
+
+        Scanner in = new Scanner(System.in);
+        int numSentences = Integer.parseInt(in.nextLine());
+        
+        while (numSentences-- > 0) {
+            String input = in.nextLine();
+            
+            Matcher m = p.matcher(input);
+            
+            // Check for subsequences of input that match the compiled pattern
+            while (m.find()) {
+                input = input.replaceAll(m.group(), m.group(1));
+
+                // input = input.replaceAll(/* The regex to replace */, /* The replacement. */);
+            // input = input.replaceAll(m.group(), "");
+
+            }
+            
+            // Prints the modified sentence.
+            System.out.println(input);
+        }
+        
+        in.close();
+    }
+}
