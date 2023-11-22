@@ -6,13 +6,14 @@
 
 
 
-Array:
+//Array:
 
 int[] myIntArray = new int[3]; // each element of the array is initialised to 0
 int[] myIntArray = {1, 2, 3};
 int[] myIntArray = new int[]{1, 2, 3};
 
 
+// try catch block
 try{
 }catch(Exeption e)
 {System.out.println(e.getClass().toString().replaceFirst("class ", ""));}
