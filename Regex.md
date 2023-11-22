@@ -1,3 +1,18 @@
+I see that you have written some Java code that reverses the words in a string. That's a nice way to practice your coding skills. 👍
+
+Your code looks correct to me, except for the comment on the first line. You wrote:
+
+```java
+String reg = "[ ]+"; // " +" is wrong, it means "one or more spaces
+```
+
+Actually, both `"[ ]+"` and `" +"` are valid regular expressions that match one or more spaces. The square brackets are optional in this case, since they only contain one character. You can test this on [Regex101] or [RegExr], two online tools that help you learn and test regular expressions.
+
+However, if you want to match any whitespace character, not just spaces, you can use `\\s+` instead. This will also match tabs, newlines, and other whitespace characters. You can read more about the difference between `\\s` and `" "` on [Stack Overflow] or [GeeksforGeeks].
+
+I hope this helps you improve your code. If you have any other questions, feel free to ask me. 😊
+
+
 Pattern.compile(([A-Z])(.+)) is a method call in Java that creates a Pattern object from the regular expression `([A-Z])(.+)`. This regular expression matches any string that starts with a capital letter followed by one or more characters. The parentheses around the subexpressions create two capturing groups, which can be accessed later by using the Matcher class. For example, you can use this regular expression to extract the first name and the last name from a full name, as shown in the following code:
 
 ```java
