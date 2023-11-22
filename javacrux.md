@@ -1,3 +1,9 @@
+
+int[] myIntArray = new int[3]; // each element of the array is initialised to 0
+int[] myIntArray = {1, 2, 3};
+int[] myIntArray = new int[]{1, 2, 3};
+
+
 ![image](https://github.com/pd-101e/Dsa-Java/assets/59065854/dd1e8a6a-860b-4180-b089-ca8d83f02f9c)
 try{
 }catch(Exeption e)
